@@ -1,0 +1,13 @@
+version: '3'
+services:
+
+  db:
+    image: mysql:5.7
+    command: mysqld --character-set-server=utf8mb4 --sql_mode="NO_AUTO_CREATE_USER"
+    environment:
+      MYSQL_ALLOW_EMPTY_PASSWORD: "no"
+      MYSQL_DATABASE: ${DB_NAME}
+      MYSQL_USER: ${DB_USERNAME}
+      MYSQL_PASSWORD: ${DB_PASSWORD}
+    ports:
+      - 3306:3306
