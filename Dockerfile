@@ -4,6 +4,7 @@ WORKDIR /usr/src/app
 
 ENV PORT 8080
 ENV HOST 0.0.0.0
+ENV TZ=Asia/Tokyo
 
 COPY ./app/package*.json ./
 
